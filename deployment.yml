@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: nodedemo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels: # labels to select/identify the deployment
+        app: nodedemo
+    spec:     # pod spec                  
+      containers: 
+      - name: nodedemo 
+        image: atmohsin/nodedemo:latest # image we pushed
+        ports:
+        - containerPort: 8080
