@@ -16,12 +16,18 @@ docker login
 docker push atmohsin/nodedemo:latest
 
 kubectl get pods
+
 kubectl get deployments
+
 kubectl get services
+
 kubectl apply -f deployment.yml
+
 kubectl apply -f service.yml
+
 
 curl http://localhost:8080
 
 kubectl delete deployments/nodedemo
+
 kubectl delete services/nodedemo
